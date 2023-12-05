@@ -14,7 +14,8 @@ fn main() {
                             .into_iter().map(|x| x.parse().unwrap()).collect() ;
     println!("{:?}", seeds);
     for chunk in chunks {
-        println!("{:?}", chunk)
+        let mut parts = chunk.split("\r\n").collect::<Vec<&str>>().into_iter();
+        println!("{:?}", parts.next().unwrap())
     }
     
 
